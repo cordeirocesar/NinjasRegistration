@@ -1,4 +1,4 @@
-package com.cesarcordeiro.NinjasRegistration;
+package com.cesarcordeiro.NinjasRegistration.ninjas;
 
 
 import org.springframework.web.bind.annotation.RequestMapping;
