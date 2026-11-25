@@ -4,7 +4,7 @@ package com.cesarcordeiro.NinjasRegistration.ninjas;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping
+@RequestMapping("/nijas")
 public class NinjaController {
     @GetMapping("/helloworld")
     public String helloworld() {
@@ -18,19 +18,19 @@ public class NinjaController {
     }
 
     // Get All Ninjas (Read)
-    @GetMapping("/all")
+    @GetMapping("/list")
     public String getAllNinjas() {
         return "Get Ninja";
     }
 
     // Get Ninja by ID (Read)
-    @GetMapping("/allID")
+    @GetMapping("/listID")
     public String getAllById() {
         return "Get Ninja by ID";
     }
 
     // Update Ninja Information (Update)
-    @PutMapping("/updateID")
+    @PutMapping("/update")
     public String updateNinjaById() {
         return "Update Ninja by ID";
     }
