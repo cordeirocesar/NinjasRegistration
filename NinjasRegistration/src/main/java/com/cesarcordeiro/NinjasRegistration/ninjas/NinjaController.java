@@ -33,9 +33,9 @@ public class NinjaController {
     }
 
     // Get Ninja by ID (Read)
-    @GetMapping("/listID")
-    public String getAllById() {
-        return "Get Ninja by ID";
+    @GetMapping("/list/{id}")
+    public NinjaModel getAllById(@PathVariable Long id) {
+        return ninjaService.getAllById(id);
     }
 
     // Update Ninja Information (Update)
