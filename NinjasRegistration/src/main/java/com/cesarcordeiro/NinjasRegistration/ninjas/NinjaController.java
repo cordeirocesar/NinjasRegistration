@@ -3,9 +3,18 @@ package com.cesarcordeiro.NinjasRegistration.ninjas;
 
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
-@RequestMapping("/nijas")
+@RequestMapping("/ninjas")
 public class NinjaController {
+
+    private NinjaService ninjaService;
+
+    public NinjaController(NinjaService ninjaService) {
+        this.ninjaService = ninjaService;
+    }
+
     @GetMapping("/helloworld")
     public String helloworld() {
         return "Hello World";
@@ -19,8 +28,8 @@ public class NinjaController {
 
     // Get All Ninjas (Read)
     @GetMapping("/list")
-    public String getAllNinjas() {
-        return "Get Ninja";
+    public List<NinjaModel> getAllNinjas() {
+        return ninjaService.getAllNinjas();
     }
 
     // Get Ninja by ID (Read)
